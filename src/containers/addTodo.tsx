@@ -27,7 +27,7 @@ let AddTodo = ({dispatch}) => {
     </div>
   )
 }
-
+// No Pasa props por el connect al componente AddTodo
 const TodoApp = connect()(AddTodo)
 
 export default TodoApp;

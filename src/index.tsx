@@ -6,7 +6,6 @@ import { createStore } from 'redux';
 import reducer from './reducers';
 import App from './components/app';
 
-
 // import ReactDOMServer from 'react-dom/server';
 // import configureStore from '../store/configureStore';
 

@@ -1,24 +1,23 @@
-// Se agrega
-
-
 import { connect } from 'react-redux';
 import { setVisibilityFilter } from '../actions';
 import Link from '../components/link'
 
-const mapStateToProps = (state:any, ownProps:any) => {
+// mapStateToProps es una función que retorna un objeto simple
+const mapStateToProps = (state, ownProps) => {
   return {
-    active: ownProps.filter === state.visibilityFilter
+    active: ownProps.filter === state.reducerVisibilityFilter,
+    word: 'Hoaaa'
   }
 }
 
-const mapDispatchToProps = (dispatch:any, ownProps:any) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: () => {
-      dispatch(setVisibilityFilter(ownProps.filter))
-    }
+    onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
   }
 }
 
+// Pasa mapStateToProps y mapDispatchToProps como props al componente Link
+// El nuevo componente (FilterLink) se subscribirá Redux
 const FilterLink = connect(
   mapStateToProps,
   mapDispatchToProps

@@ -4,9 +4,11 @@ interface IProps {
   active: any
   children: any;
   onClick(): void;
+  filter: any;
+  word: string;
 }
 
-const Link: React.SFC<IProps> = ({ active, children, onClick  }) => {
+const Link: React.SFC<IProps> = ({ active, word , children, onClick, filter }) => {
   if (active) {
     return <span>{children}</span>
   }

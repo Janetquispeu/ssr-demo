@@ -22,8 +22,6 @@ const todo = (state: any = {}, action: any) => {
 }
 
 const todos = (state: any = [], action: any) => {
-  console.log(state, 'state');
-  console.log(action, 'action');
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -31,6 +29,7 @@ const todos = (state: any = [], action: any) => {
         todo(undefined, action)
       ]
     case 'TOGGLE_TODO':
+      console.log(state, action, 'reducer');
       return state.map((t:any) => todo(t, action))
     default:
       return state
