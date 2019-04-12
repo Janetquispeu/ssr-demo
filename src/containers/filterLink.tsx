@@ -5,8 +5,7 @@ import Link from '../components/link'
 // mapStateToProps es una función que retorna un objeto simple
 const mapStateToProps = (state, ownProps) => {
   return {
-    active: ownProps.filter === state.reducerVisibilityFilter,
-    word: 'Hoaaa'
+    active: ownProps.filter === state.reducerVisibilityFilter
   }
 }
 

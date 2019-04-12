@@ -29,7 +29,6 @@ const todos = (state: any = [], action: any) => {
         todo(undefined, action)
       ]
     case 'TOGGLE_TODO':
-      console.log(state, action, 'reducer');
       return state.map((t:any) => todo(t, action))
     default:
       return state

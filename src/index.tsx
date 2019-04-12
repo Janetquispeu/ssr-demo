@@ -10,7 +10,6 @@ import App from './components/app';
 // import configureStore from '../store/configureStore';
 
 let store = createStore(reducer)
-
 render(
   <Provider store={store}>
     <App />
